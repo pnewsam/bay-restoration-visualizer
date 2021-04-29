@@ -1,0 +1,324 @@
+[
+  {
+    "geography": "San Francisco Bay",
+    "year": "1970",
+    "acres_chg_bay_surface": "-72.0",
+    "cumulative_chg_since1969": "-72.0",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1971",
+    "acres_chg_bay_surface": "-25.1",
+    "cumulative_chg_since1969": "-97.1",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1972",
+    "acres_chg_bay_surface": "-7.0",
+    "cumulative_chg_since1969": "-104.1",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1973",
+    "acres_chg_bay_surface": "-4.4",
+    "cumulative_chg_since1969": "-108.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1974",
+    "acres_chg_bay_surface": "274.0",
+    "cumulative_chg_since1969": "165.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1975",
+    "acres_chg_bay_surface": "5.0",
+    "cumulative_chg_since1969": "170.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1976",
+    "acres_chg_bay_surface": "-2.2",
+    "cumulative_chg_since1969": "168.3",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1977",
+    "acres_chg_bay_surface": "16.8",
+    "cumulative_chg_since1969": "185.1",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1978",
+    "acres_chg_bay_surface": "-1.9",
+    "cumulative_chg_since1969": "183.2",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1979",
+    "acres_chg_bay_surface": "3.4",
+    "cumulative_chg_since1969": "186.6",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1980",
+    "acres_chg_bay_surface": "30.0",
+    "cumulative_chg_since1969": "216.6",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1981",
+    "acres_chg_bay_surface": "44.5",
+    "cumulative_chg_since1969": "261.1",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1982",
+    "acres_chg_bay_surface": "262.0",
+    "cumulative_chg_since1969": "523.1",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1983",
+    "acres_chg_bay_surface": "5.0",
+    "cumulative_chg_since1969": "528.1",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1984",
+    "acres_chg_bay_surface": "12.0",
+    "cumulative_chg_since1969": "540.1",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1985",
+    "acres_chg_bay_surface": "60.0",
+    "cumulative_chg_since1969": "600.1",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1986",
+    "acres_chg_bay_surface": "11.0",
+    "cumulative_chg_since1969": "611.1",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1987",
+    "acres_chg_bay_surface": "-2.0",
+    "cumulative_chg_since1969": "609.1",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1988",
+    "acres_chg_bay_surface": "152.2",
+    "cumulative_chg_since1969": "761.3",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1989",
+    "acres_chg_bay_surface": "1.7",
+    "cumulative_chg_since1969": "763.0",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1990",
+    "acres_chg_bay_surface": "-1.5",
+    "cumulative_chg_since1969": "761.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1991",
+    "acres_chg_bay_surface": "-0.7",
+    "cumulative_chg_since1969": "760.8",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1992",
+    "acres_chg_bay_surface": "-1.6",
+    "cumulative_chg_since1969": "759.2",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1993",
+    "acres_chg_bay_surface": "50.1",
+    "cumulative_chg_since1969": "809.3",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1994",
+    "acres_chg_bay_surface": "1.6",
+    "cumulative_chg_since1969": "810.9",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1995",
+    "acres_chg_bay_surface": "549.6",
+    "cumulative_chg_since1969": "1360.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1996",
+    "acres_chg_bay_surface": "-1.0",
+    "cumulative_chg_since1969": "1359.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1997",
+    "acres_chg_bay_surface": "75.0",
+    "cumulative_chg_since1969": "1434.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1998",
+    "acres_chg_bay_surface": "38.5",
+    "cumulative_chg_since1969": "1473.0",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "1999",
+    "acres_chg_bay_surface": "258.0",
+    "cumulative_chg_since1969": "1731.0",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2000",
+    "acres_chg_bay_surface": "112.4",
+    "cumulative_chg_since1969": "1843.4",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2001",
+    "acres_chg_bay_surface": "5649.3",
+    "cumulative_chg_since1969": "7492.7",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2002",
+    "acres_chg_bay_surface": "1.1",
+    "cumulative_chg_since1969": "7493.8",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2003",
+    "acres_chg_bay_surface": "118.7",
+    "cumulative_chg_since1969": "7612.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2004",
+    "acres_chg_bay_surface": "493.0",
+    "cumulative_chg_since1969": "8105.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2005",
+    "acres_chg_bay_surface": "3807.0",
+    "cumulative_chg_since1969": "11912.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2006",
+    "acres_chg_bay_surface": "70.0",
+    "cumulative_chg_since1969": "11982.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2007",
+    "acres_chg_bay_surface": "2560.0",
+    "cumulative_chg_since1969": "14542.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2008",
+    "acres_chg_bay_surface": "961.0",
+    "cumulative_chg_since1969": "15503.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2009",
+    "acres_chg_bay_surface": "174.0",
+    "cumulative_chg_since1969": "15677.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2010",
+    "acres_chg_bay_surface": "1562.0",
+    "cumulative_chg_since1969": "17239.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2011",
+    "acres_chg_bay_surface": "74.0",
+    "cumulative_chg_since1969": "17313.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2012",
+    "acres_chg_bay_surface": "201.0",
+    "cumulative_chg_since1969": "17514.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2013",
+    "acres_chg_bay_surface": "968.0",
+    "cumulative_chg_since1969": "18482.5",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2014",
+    "acres_chg_bay_surface": "13.8",
+    "cumulative_chg_since1969": "18496.3",
+    "source": "BCDC_AnnualReport_2014"
+  },
+  {
+    "geography": "San Francisco Bay",
+    "year": "2015",
+    "acres_chg_bay_surface": "-0.1",
+    "cumulative_chg_since1969": "18496.2",
+    "source": "BCDC_AnnualReport_2015"
+  }
+]
