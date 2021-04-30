@@ -20,7 +20,7 @@ export const useTable = ({ data, perPage = 20, tableConfig }: Params) => {
   useEffect(() => {
     setRows(data);
     const formattedColumns = deriveColumns({
-      datum: data[0],
+      datum: data[0] || {},
       exclusions: tableConfig.fieldExclusions,
       displayNameMapping: tableConfig.fieldNameMappings,
     });
