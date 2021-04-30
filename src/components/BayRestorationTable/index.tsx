@@ -11,7 +11,7 @@ export const BayRestorationTable = () => {
   //   dependencies: [],
   // });
   const { rows, columns, nextPage, prevPage, page, lastPage } = useTable({
-    data,
+    data: data || [],
     tableConfig: BAY_RESTORATION_TABLE_CONFIG,
     perPage: 10,
   });
@@ -20,7 +20,7 @@ export const BayRestorationTable = () => {
 
   return (
     <div>
-      <table className="table is-bordered is-striped is-hoverable is-narrow">
+      <table className="table is-bordered is-striped is-hoverable is-narrow is-fullwidth">
         <thead>
           <tr>
             {Boolean(columns?.length) &&

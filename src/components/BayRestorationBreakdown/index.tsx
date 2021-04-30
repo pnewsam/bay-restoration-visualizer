@@ -1,8 +1,9 @@
 import React from "react";
 import BayRestorationTable from "../BayRestorationTable";
+import BayRestorationBarChart from "../BayRestorationBarChart";
 
 export const text = {
-  title: "Bay Area Bay Restoration",
+  title: "Bay Restoration in the S.F. Bay Area",
 };
 
 export const BayRestorationBreakdown = () => {
@@ -10,10 +11,28 @@ export const BayRestorationBreakdown = () => {
     <section className="section">
       <div className="container">
         <h1 className="title is-1">{text.title}</h1>
+        <div className="content">
+          <p>
+            This visualizes a dataset representing the change in San Francisco
+            Bay surface area since 1969. This data is provided by the San
+            Francisco Bay Conservation and Development Commission and made
+            available by the Metropolitan Transportation Commission's&nbsp;
+            <a href="https://www.vitalsigns.mtc.ca.gov/">Vital Signs project</a>
+            .
+          </p>
+          <p>
+            <a href="https://data.bayareametro.gov/dataset/Vital-Signs-Bay-Restoration-Bay-Area/mba6-sgwr">
+              View the Original Data
+            </a>
+          </p>
+        </div>
+        <div className="block">
+          <BayRestorationBarChart></BayRestorationBarChart>
+        </div>
         <div className="columns">
           <div className="column is-half">
             <div className="content">
-              <h4>Description</h4>
+              <h4 className="is-four">Description</h4>
               <p>
                 Bay restoration refers to the acreage of San Francisco Bay. This
                 measure reflects either the Bay’s expansion from restoration
@@ -23,7 +42,7 @@ export const BayRestorationBreakdown = () => {
                 well as nearby development activities. The dataset includes
                 acreage of Bay restoration or fill on a regional level.
               </p>
-              <h4>Methodology</h4>
+              <h4 className="is-four">Methodology</h4>
               <p>
                 BCDC defines the change in Bay acreage as “any area of the Bay
                 created or restored, including salt ponds converted into tidal

@@ -1,0 +1,12 @@
+.root {
+  border: solid 1px #dbdbdb;
+  padding: 20px 10px 10px;
+}
+
+.caption {
+  margin-bottom: 20px;
+}
+
+.chartWrapper {
+  overflow-x: scroll;
+}
