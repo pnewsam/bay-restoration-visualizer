@@ -1,58 +1,40 @@
-import React, { SetStateAction, useEffect, useState } from "react";
+import React from "react";
 import data from "../../data.json";
-import { FieldNameMapping } from "types";
-
-interface Row {
-  [field: string]: string;
-}
-
-const columnDisplayNames: FieldNameMapping = {
-  year: "Year",
-  acres_chg_bay_surface: "Acres Change in Bay Surface",
-  cumulative_chg_since1969: "Cumulative Change Since 1969",
-};
-
-const formatColumns = (data: any) =>
-  Object.keys(data[0])
-    .filter((name) => !["geography", "source"].includes(name))
-    .map((name) => columnDisplayNames[name as keyof FieldNameMapping]);
+import { useFetchJson, useTable } from "hooks";
+import { BAY_RESTORATION_TABLE_CONFIG } from "constants/index";
+import { Row } from "types";
 
 export const BayRestorationTable = () => {
-  const [rows, setRows] = useState([]);
-  const [columns, setColumns] = useState([]);
-
-  useEffect(() => {
-    // fetch("https://data.bayareametro.gov/resource/mba6-sgwr.json")
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     setRows(data);
-    //     const columnNames = formatColumns(data)
-    //     setColumns(columnNames as never[]);
-    //   });
-    setRows(data as SetStateAction<never[]>);
-    const columns = formatColumns(data);
-    setColumns(columns as SetStateAction<never[]>);
-  }, []);
+  // const data = useFetchJson({
+  //   url: "https://data.bayareametro.gov/resource/mba6-sgwr.json",
+  //   dependencies: [],
+  // });
+  const { rows, columns } = useTable({
+    data,
+    tableConfig: BAY_RESTORATION_TABLE_CONFIG,
+  });
 
   return (
-    <table className="table">
-      <thead>
-        <tr>
-          {Boolean(columns?.length) &&
-            columns.map((column) => <th>{column}</th>)}
-        </tr>
-      </thead>
-      <tbody>
-        {Boolean(rows?.length) &&
-          rows.map((row: Row) => (
-            <tr>
-              <td>{row.year}</td>
-              <td>{row.acres_chg_bay_surface}</td>
-              <td>{row.cumulative_chg_since1969}</td>
-            </tr>
-          ))}
-      </tbody>
-    </table>
+    <div className="table-container">
+      <table className="table is-bordered is-striped is-hoverable">
+        <thead>
+          <tr>
+            {Boolean(columns?.length) &&
+              columns.map((column) => <th key={column}>{column}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {Boolean(rows?.length) &&
+            rows.map((row: Row) => (
+              <tr key={row.year}>
+                <td>{row.year}</td>
+                <td>{row.acres_chg_bay_surface}</td>
+                <td>{row.cumulative_chg_since1969}</td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
