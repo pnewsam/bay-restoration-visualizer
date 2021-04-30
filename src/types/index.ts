@@ -1,3 +1,1 @@
-export interface FieldNameMapping {
-  [key: string]: string;
-}
+export * from "./table";
