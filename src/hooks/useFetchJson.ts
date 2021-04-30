@@ -17,7 +17,7 @@ export const useFetchJson = ({ dependencies = [], url }: Props) => {
       .catch((error) => {
         console.log(error);
       });
-  }, dependencies);
+  }, [...dependencies, url]);
 
   return data;
 };

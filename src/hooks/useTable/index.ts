@@ -21,7 +21,7 @@ export const useTable = ({ data, perPage = 20, tableConfig }: Params) => {
       displayNameMapping: tableConfig.fieldNameMappings,
     });
     setColumns(formattedColumns);
-  }, [data]);
+  }, [data, tableConfig.fieldExclusions, tableConfig.fieldNameMappings]);
 
   const cursorLeft = page * perPage;
   const cursorRight = cursorLeft + perPage;

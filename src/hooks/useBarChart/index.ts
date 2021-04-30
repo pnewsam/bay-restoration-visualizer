@@ -69,5 +69,5 @@ export const useBarChart = ({ data, width, height }: Params) => {
       .attr("dy", "0.71em")
       .attr("text-anchor", "end")
       .text("value");
-  }, [data]);
+  }, [data, width, height]);
 };

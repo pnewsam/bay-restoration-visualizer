@@ -1,8 +1,8 @@
 import React from "react";
 import data from "data.json";
 // import { useFetchJson } from "hooks";
-import BayRestorationTable from "../BayRestorationTable";
-import BayRestorationBarChart from "../BayRestorationBarChart";
+import Table from "./Table";
+import BarChart from "./BarChart";
 
 export const text = {
   title: "Bay Restoration in the S.F. Bay Area",
@@ -33,11 +33,7 @@ export const BayRestorationSection = () => {
             </a>
           </p>
         </div>
-        <div className="block">
-          {data && (
-            <BayRestorationBarChart data={data}></BayRestorationBarChart>
-          )}
-        </div>
+        <div className="block">{data && <BarChart data={data}></BarChart>}</div>
         <div className="columns">
           <div className="column is-half">
             <div className="content">
@@ -63,7 +59,7 @@ export const BayRestorationSection = () => {
             </div>
           </div>
           <div className="column is-half">
-            {data && <BayRestorationTable data={data}></BayRestorationTable>}
+            {data && <Table data={data}></Table>}
           </div>
         </div>
       </div>

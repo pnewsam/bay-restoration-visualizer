@@ -2,20 +2,18 @@ import React from "react";
 import { useTable } from "hooks";
 import { BAY_RESTORATION_TABLE_CONFIG } from "constants/index";
 import { Datum, Row } from "types";
-import styles from "./styles.module.css";
+import { TablePagination } from "../TablePagination";
 
 interface Props {
   data: Datum[];
 }
 
-export const BayRestorationTable = ({ data }: Props) => {
+export const Table = ({ data }: Props) => {
   const { rows, columns, nextPage, prevPage, page, lastPage } = useTable({
     data: data || [],
     tableConfig: BAY_RESTORATION_TABLE_CONFIG,
     perPage: 10,
   });
-
-  const pageCount = `Page ${page} of ${lastPage}`;
 
   return (
     <div>
@@ -37,27 +35,14 @@ export const BayRestorationTable = ({ data }: Props) => {
             ))}
         </tbody>
       </table>
-      <nav className="pagination" role="navigation" aria-label="pagination">
-        <div className={`pagination-list ${styles.pageCount}`}>
-          <span>{pageCount}</span>
-        </div>
-        <button
-          className="pagination-previous"
-          disabled={!Boolean(prevPage)}
-          onClick={prevPage}
-        >
-          Previous
-        </button>
-        <button
-          className="pagination-next"
-          disabled={!Boolean(nextPage)}
-          onClick={nextPage}
-        >
-          Next page
-        </button>
-      </nav>
+      <TablePagination
+        page={page}
+        lastPage={lastPage}
+        prevPage={prevPage}
+        nextPage={nextPage}
+      ></TablePagination>
     </div>
   );
 };
 
-export default BayRestorationTable;
+export default Table;

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useBarChart } from "hooks";
 import { formatChartData } from "./utils";
 import { Datum } from "types";
@@ -11,7 +11,7 @@ interface Props {
   data: Datum[];
 }
 
-export const BayRestorationBarChart = ({ data }: Props) => {
+export const BarChart = ({ data }: Props) => {
   let chartData = formatChartData(data);
 
   useBarChart({ data: chartData, width: CHART_WIDTH, height: CHART_HEIGHT });
@@ -30,4 +30,4 @@ export const BayRestorationBarChart = ({ data }: Props) => {
   );
 };
 
-export default BayRestorationBarChart;
+export default BarChart;
