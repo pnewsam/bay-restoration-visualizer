@@ -1,10 +1,21 @@
 import React, { useEffect } from "react";
-import data from "data.json";
 import { useBarChart } from "hooks";
+import { formatChartData } from "./utils";
+import { Datum } from "types";
 import styles from "./styles.module.css";
 
-export const BayRestorationBarChart = () => {
-  useBarChart({ data, width: 1200, height: 400 });
+const CHART_WIDTH = 1200;
+const CHART_HEIGHT = 400;
+
+interface Props {
+  data: Datum[];
+}
+
+export const BayRestorationBarChart = ({ data }: Props) => {
+  let chartData = formatChartData(data);
+
+  useBarChart({ data: chartData, width: CHART_WIDTH, height: CHART_HEIGHT });
+
   const stylesCaption = `has-text-centered ${styles.caption}`;
 
   return (
@@ -13,7 +24,7 @@ export const BayRestorationBarChart = () => {
         Acres Change in Bay Surface by Year
       </figcaption>
       <div className={styles.chartWrapper}>
-        <svg width="1200" height="400"></svg>
+        <svg width={CHART_WIDTH} height={CHART_HEIGHT}></svg>
       </div>
     </figure>
   );

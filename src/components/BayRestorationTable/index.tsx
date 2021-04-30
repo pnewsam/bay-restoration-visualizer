@@ -1,15 +1,14 @@
 import React from "react";
-import data from "../../data.json";
-import { useFetchJson, useTable } from "hooks";
+import { useTable } from "hooks";
 import { BAY_RESTORATION_TABLE_CONFIG } from "constants/index";
-import { Row } from "types";
+import { Datum, Row } from "types";
 import styles from "./styles.module.css";
 
-export const BayRestorationTable = () => {
-  // const data = useFetchJson({
-  //   url: "https://data.bayareametro.gov/resource/mba6-sgwr.json",
-  //   dependencies: [],
-  // });
+interface Props {
+  data: Datum[];
+}
+
+export const BayRestorationTable = ({ data }: Props) => {
   const { rows, columns, nextPage, prevPage, page, lastPage } = useTable({
     data: data || [],
     tableConfig: BAY_RESTORATION_TABLE_CONFIG,

@@ -1,4 +1,6 @@
 import React from "react";
+import data from "data.json";
+// import { useFetchJson } from "hooks";
 import BayRestorationTable from "../BayRestorationTable";
 import BayRestorationBarChart from "../BayRestorationBarChart";
 
@@ -6,7 +8,12 @@ export const text = {
   title: "Bay Restoration in the S.F. Bay Area",
 };
 
-export const BayRestorationBreakdown = () => {
+export const BayRestorationSection = () => {
+  // const data = useFetchJson({
+  //   url: "https://data.bayareametro.gov/resource/mba6-sgwr.json",
+  //   dependencies: [],
+  // });
+
   return (
     <section className="section">
       <div className="container">
@@ -27,7 +34,9 @@ export const BayRestorationBreakdown = () => {
           </p>
         </div>
         <div className="block">
-          <BayRestorationBarChart></BayRestorationBarChart>
+          {data && (
+            <BayRestorationBarChart data={data}></BayRestorationBarChart>
+          )}
         </div>
         <div className="columns">
           <div className="column is-half">
@@ -54,7 +63,7 @@ export const BayRestorationBreakdown = () => {
             </div>
           </div>
           <div className="column is-half">
-            <BayRestorationTable></BayRestorationTable>
+            {data && <BayRestorationTable data={data}></BayRestorationTable>}
           </div>
         </div>
       </div>
@@ -62,4 +71,4 @@ export const BayRestorationBreakdown = () => {
   );
 };
 
-export default BayRestorationBreakdown;
+export default BayRestorationSection;
