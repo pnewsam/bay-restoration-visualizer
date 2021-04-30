@@ -1,6 +1,5 @@
 import React from "react";
-import data from "data.json";
-// import { useFetchJson } from "hooks";
+import { useFetchJson } from "hooks";
 import Table from "./Table";
 import BarChart from "./BarChart";
 
@@ -8,11 +7,14 @@ export const text = {
   title: "Bay Restoration in the S.F. Bay Area",
 };
 
+const BAY_RESTRATION_DATA_URL =
+  "https://data.bayareametro.gov/resource/mba6-sgwr.json";
+
 export const BayRestorationSection = () => {
-  // const data = useFetchJson({
-  //   url: "https://data.bayareametro.gov/resource/mba6-sgwr.json",
-  //   dependencies: [],
-  // });
+  const data = useFetchJson({
+    url: BAY_RESTRATION_DATA_URL,
+    dependencies: [],
+  });
 
   return (
     <section className="section">
