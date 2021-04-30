@@ -2,10 +2,12 @@ import { useEffect } from "react";
 import { select } from "d3-selection";
 import { scaleBand, scaleLinear } from "d3-scale";
 import { axisBottom, axisLeft } from "d3-axis";
+import { barFill, xTickFormat } from "./utils";
 
 interface Params {
   data: {
-    [field: string]: string;
+    x: string;
+    y: number;
   }[];
   width: number;
   height: number;
@@ -21,15 +23,13 @@ export const useBarChart = ({ data, width, height }: Params) => {
       .padding(0.2);
     xScale.domain(
       data.map(function (d) {
-        return d.year;
+        return d.x;
       })
     );
 
     // Create y scale
     const yScale = scaleLinear().range([height - 40, 0]);
-    const yValues = data.map((datum) =>
-      parseFloat(datum.acres_chg_bay_surface)
-    );
+    const yValues = data.map((datum) => datum.y);
     const maxY = Math.max(...yValues);
     const minY = Math.min(...yValues);
     yScale.domain([minY, maxY]);
@@ -43,35 +43,23 @@ export const useBarChart = ({ data, width, height }: Params) => {
       .enter()
       .append("rect")
       .attr("class", "bar")
-      .attr("x", function (d: { year: string }) {
-        return xScale(d.year);
+      .attr("x", function (d: { x: string }) {
+        return xScale(d.x);
       } as any)
       .attr("y", function (d) {
-        const yVal = parseFloat(d.acres_chg_bay_surface);
-        if (yVal < 0) {
-          return yScale(minY);
-        }
-        return yScale(yVal);
+        return d.y < 0 ? yScale(minY) : yScale(d.y);
       })
       .attr("width", xScale.bandwidth())
       .attr("height", function (d) {
-        const yVal = Math.abs(parseFloat(d.acres_chg_bay_surface));
+        const yVal = Math.abs(d.y);
         return height - 40 - yScale(yVal);
       })
-      .attr("fill", function (d) {
-        return parseFloat(d.acres_chg_bay_surface) < 0 ? "#ff3860" : "#485fc7";
-      });
+      .attr("fill", barFill);
 
     // Add x axis
     g.append("g")
       .attr("transform", `translate(0,${yScale(minY)})`)
-      .call(
-        axisBottom(xScale)
-          .tickFormat(function (d: any) {
-            return d % 5 === 0 ? d : undefined;
-          } as any)
-          .tickPadding(10)
-      );
+      .call(axisBottom(xScale).tickFormat(xTickFormat).tickPadding(10));
 
     // Add y axis
     g.append("g")
@@ -81,5 +69,5 @@ export const useBarChart = ({ data, width, height }: Params) => {
       .attr("dy", "0.71em")
       .attr("text-anchor", "end")
       .text("value");
-  }, [data]);
+  }, [data, width, height]);
 };

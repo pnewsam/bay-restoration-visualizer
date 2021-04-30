@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 import { deriveColumns } from "./utils";
-import { TableConfiguration, Row, Column } from "types";
-
-interface Datum {
-  [field: string]: string;
-}
+import { Datum, TableConfiguration, Row, Column } from "types";
 
 interface Params {
   data: Datum[];
@@ -25,7 +21,7 @@ export const useTable = ({ data, perPage = 20, tableConfig }: Params) => {
       displayNameMapping: tableConfig.fieldNameMappings,
     });
     setColumns(formattedColumns);
-  }, [data]);
+  }, [data, tableConfig.fieldExclusions, tableConfig.fieldNameMappings]);
 
   const cursorLeft = page * perPage;
   const cursorRight = cursorLeft + perPage;
@@ -37,12 +33,12 @@ export const useTable = ({ data, perPage = 20, tableConfig }: Params) => {
   rows = rows.slice(cursorLeft, cursorRight);
 
   return {
-    rows,
     columns,
-    setPage,
-    page,
     lastPage,
     nextPage,
+    page,
     prevPage,
+    rows,
+    setPage,
   };
 };

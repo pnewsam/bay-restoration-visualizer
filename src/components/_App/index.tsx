@@ -1,11 +1,11 @@
 import React from "react";
-import BayRestorationBreakdown from "components/BayRestorationBreakdown";
+import BayRestorationSection from "components/BayRestorationSection";
 import Layout from "components/Layout";
 
 const App = () => (
   <div className="App">
     <Layout>
-      <BayRestorationBreakdown></BayRestorationBreakdown>
+      <BayRestorationSection></BayRestorationSection>
     </Layout>
   </div>
 );
